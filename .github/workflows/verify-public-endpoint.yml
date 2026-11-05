@@ -1,4 +1,4 @@
-name: Verify public JPX JSON endpoint anonymously
+name: Verify both public JPX and macro JSON endpoints anonymously
 on:
   workflow_dispatch:
   push:
@@ -36,4 +36,23 @@ jobs:
           assert len({x['date'] for x in rows})==len(rows)
           assert all(x['advancers']>0 and x['decliners']>0 and x['upVolume']>0 and x['downVolume']>0 for x in rows)
           print('Validated public market input days:',len(rows),'latest:',rows[-1]['date'])
+          PY
+      - name: Confirm public economic indicator JSON and CORS
+        env:
+          FEED_URL: https://raw.githubusercontent.com/naoyaaiueo827-create/kabu-note-market-feed-public/main/macro-summary.json
+        run: |
+          python3 - <<'PY'
+          import urllib.request,os,json
+          req=urllib.request.Request(os.environ['FEED_URL'],headers={'User-Agent':'KabuNote-PublicMacroCheck/1.0'})
+          with urllib.request.urlopen(req,timeout=20) as r:
+            assert r.status==200
+            cors=r.headers.get('Access-Control-Allow-Origin')
+            print('CORS:',cors)
+            assert cors=='*'
+            data=json.loads(r.read(300000).decode('utf-8'))
+          assert data['schemaVersion']==1
+          assert data['status']=='complete'
+          assert len(data['indicators'])==11
+          assert all(x['latest'] is not None and x['dataStatus']=='fresh_fetch' for x in data['indicators'])
+          print('Public macro observations verified:',len(data['indicators']))
           PY
