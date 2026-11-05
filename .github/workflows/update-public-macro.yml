@@ -1,0 +1,57 @@
+# Publishes latest-only FRED economic series, never a private portfolio or trading decision.
+name: Refresh public macro summary
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update-macro-summary.mjs'
+      - '.github/workflows/update-public-macro.yml'
+  schedule:
+    - cron: '30 23 * * *' # 08:30 JST, update may be delayed by GitHub scheduler
+permissions:
+  contents: write
+concurrency:
+  group: public-macro-summary
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check collector and retrieve public official observations
+        id: collect
+        continue-on-error: true
+        run: |
+          node --check scripts/update-macro-summary.mjs
+          node scripts/update-macro-summary.mjs
+      - name: Save only latest public market observations
+        run: |
+          if [ -s macro-summary.json ]; then
+            python3 - <<'PY'
+          import json
+          d=json.load(open('macro-summary.json'))
+          assert d['kind'].startswith('market-only')
+          assert len(d['indicators'])==11
+          assert all(x['id'] and x['source'] and x['dataStatus'] for x in d['indicators'])
+          assert not any(key in d for key in ('account','portfolio','trades','token','password'))
+          print('Validated public macro source states:',d['status'])
+          PY
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add macro-summary.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Update public FRED latest macro snapshot"
+              git pull --rebase
+              git push
+            fi
+          fi
+      - name: Flag partial data availability
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::warning::Some FRED series unavailable; stale/unavailable values marked explicitly."
+          exit 1
