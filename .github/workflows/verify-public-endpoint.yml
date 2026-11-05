@@ -1,0 +1,39 @@
+name: Verify public JPX JSON endpoint anonymously
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-public-endpoint.yml'
+  schedule:
+    - cron: '40 9 * * 1-5' # 18:40 JST after feed updater
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Confirm anonymous HTTPS JSON and CORS
+        env:
+          FEED_URL: https://raw.githubusercontent.com/naoyaaiueo827-create/kabu-note-market-feed-public/main/jpfg-breadth.json
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          from urllib.error import HTTPError
+          req=urllib.request.Request(os.environ['FEED_URL'],headers={'User-Agent':'KabuNote-AnonymousFeedCheck/1.0'})
+          with urllib.request.urlopen(req,timeout=20) as r:
+            print('HTTP status',r.status)
+            print('Content-Type',r.headers.get('Content-Type'))
+            print('Access-Control-Allow-Origin',r.headers.get('Access-Control-Allow-Origin'))
+            raw=r.read(1024*1024)
+          data=json.loads(raw.decode('utf-8'))
+          assert data.get('market')=='TSE_PRIME'
+          assert data.get('unchangedExcluded') is True
+          rows=data['rows']
+          assert len(rows)>=25
+          assert all(x['complete'] is True for x in rows)
+          assert len({x['date'] for x in rows})==len(rows)
+          assert all(x['advancers']>0 and x['decliners']>0 and x['upVolume']>0 and x['downVolume']>0 for x in rows)
+          print('Validated public market input days:',len(rows),'latest:',rows[-1]['date'])
+          PY
