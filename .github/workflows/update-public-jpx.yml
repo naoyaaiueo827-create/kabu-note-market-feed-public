@@ -1,0 +1,48 @@
+# Standalone in a PUBLIC repository. Does not access the private KABU NOTE repo.
+# The JSON file in main is directly served via raw.githubusercontent.com.
+name: Refresh public JPX Prime breadth JSON
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-public-jpx.yml'
+      - 'scripts/update_breadth.py'
+      - 'scripts/jpx_prime_parser.py'
+  schedule:
+    - cron: '20 9 * * 1-5' # 18:20 JST weekdays; GitHub scheduler may delay
+permissions:
+  contents: write
+concurrency:
+  group: public-jpx-prime-feed
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official PDF text parser
+        run: python -m pip install --disable-pip-version-check pymupdf==1.26.6
+      - name: Collect validated Prime trading-day aggregates
+        run: |
+          python -m py_compile scripts/jpx_prime_parser.py scripts/update_breadth.py
+          python scripts/update_breadth.py
+      - name: Commit market-only JSON changes
+        run: |
+          test -s jpfg-breadth.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jpfg-breadth.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update public official JPX Prime aggregated statistics"
+            git pull --rebase
+            git push
+          else
+            echo "No newer complete official trading day available"
+          fi
