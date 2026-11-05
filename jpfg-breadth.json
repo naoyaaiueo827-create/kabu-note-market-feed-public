@@ -1,0 +1,247 @@
+{
+  "market": "TSE_PRIME",
+  "source": "Japan Exchange Group official Prime auction regular-way stock quotations; market-only aggregated data",
+  "unchangedExcluded": true,
+  "rows": [
+    {
+      "date": "2026-09-09",
+      "advancers": 593,
+      "decliners": 915,
+      "upVolume": 1217031.3,
+      "downVolume": 1055053,
+      "complete": true
+    },
+    {
+      "date": "2026-09-10",
+      "advancers": 716,
+      "decliners": 777,
+      "upVolume": 1258280.3,
+      "downVolume": 808143.2,
+      "complete": true
+    },
+    {
+      "date": "2026-09-14",
+      "advancers": 1211,
+      "decliners": 304,
+      "upVolume": 1356384.1,
+      "downVolume": 612000.6,
+      "complete": true
+    },
+    {
+      "date": "2026-09-15",
+      "advancers": 794,
+      "decliners": 679,
+      "upVolume": 597757.9,
+      "downVolume": 1265665.3,
+      "complete": true
+    },
+    {
+      "date": "2026-09-16",
+      "advancers": 1039,
+      "decliners": 445,
+      "upVolume": 970996.3,
+      "downVolume": 766048.8,
+      "complete": true
+    },
+    {
+      "date": "2026-09-17",
+      "advancers": 1280,
+      "decliners": 228,
+      "upVolume": 1467282.6,
+      "downVolume": 435497,
+      "complete": true
+    },
+    {
+      "date": "2026-09-18",
+      "advancers": 502,
+      "decliners": 993,
+      "upVolume": 834048,
+      "downVolume": 1996534.8,
+      "complete": true
+    },
+    {
+      "date": "2026-09-24",
+      "advancers": 669,
+      "decliners": 827,
+      "upVolume": 850917.5,
+      "downVolume": 1605914.2,
+      "complete": true
+    },
+    {
+      "date": "2026-09-25",
+      "advancers": 1107,
+      "decliners": 377,
+      "upVolume": 1481834.8,
+      "downVolume": 632061.7,
+      "complete": true
+    },
+    {
+      "date": "2026-09-28",
+      "advancers": 455,
+      "decliners": 1036,
+      "upVolume": 638803.7,
+      "downVolume": 1744604.2,
+      "complete": true
+    },
+    {
+      "date": "2026-09-30",
+      "advancers": 1119,
+      "decliners": 362,
+      "upVolume": 2494508.2,
+      "downVolume": 248682.9,
+      "complete": true
+    },
+    {
+      "date": "2026-10-02",
+      "advancers": 210,
+      "decliners": 1297,
+      "upVolume": 525587.2,
+      "downVolume": 1961632.8,
+      "complete": true
+    },
+    {
+      "date": "2026-10-05",
+      "advancers": 859,
+      "decliners": 626,
+      "upVolume": 1531622.3,
+      "downVolume": 699600.1,
+      "complete": true
+    },
+    {
+      "date": "2026-10-06",
+      "advancers": 1145,
+      "decliners": 343,
+      "upVolume": 1675377.5,
+      "downVolume": 427810.5,
+      "complete": true
+    },
+    {
+      "date": "2026-10-07",
+      "advancers": 516,
+      "decliners": 964,
+      "upVolume": 881622.8,
+      "downVolume": 1386777.5,
+      "complete": true
+    },
+    {
+      "date": "2026-10-08",
+      "advancers": 320,
+      "decliners": 1173,
+      "upVolume": 582378.2,
+      "downVolume": 1505723.6,
+      "complete": true
+    },
+    {
+      "date": "2026-10-13",
+      "advancers": 1132,
+      "decliners": 370,
+      "upVolume": 1491152.1,
+      "downVolume": 829399.9,
+      "complete": true
+    },
+    {
+      "date": "2026-10-14",
+      "advancers": 593,
+      "decliners": 882,
+      "upVolume": 765190.7,
+      "downVolume": 1370664.8,
+      "complete": true
+    },
+    {
+      "date": "2026-10-16",
+      "advancers": 1284,
+      "decliners": 221,
+      "upVolume": 2085627.8,
+      "downVolume": 259468,
+      "complete": true
+    },
+    {
+      "date": "2026-10-19",
+      "advancers": 616,
+      "decliners": 862,
+      "upVolume": 1025954.3,
+      "downVolume": 982868.3,
+      "complete": true
+    },
+    {
+      "date": "2026-10-20",
+      "advancers": 328,
+      "decliners": 1173,
+      "upVolume": 658452.3,
+      "downVolume": 1412384.4,
+      "complete": true
+    },
+    {
+      "date": "2026-10-21",
+      "advancers": 972,
+      "decliners": 515,
+      "upVolume": 1271138.1,
+      "downVolume": 874784.1,
+      "complete": true
+    },
+    {
+      "date": "2026-10-22",
+      "advancers": 674,
+      "decliners": 814,
+      "upVolume": 822844.6,
+      "downVolume": 1279759.3,
+      "complete": true
+    },
+    {
+      "date": "2026-10-23",
+      "advancers": 546,
+      "decliners": 944,
+      "upVolume": 906380.8,
+      "downVolume": 1957526.5,
+      "complete": true
+    },
+    {
+      "date": "2026-10-26",
+      "advancers": 813,
+      "decliners": 674,
+      "upVolume": 1200307,
+      "downVolume": 799121.1,
+      "complete": true
+    },
+    {
+      "date": "2026-10-27",
+      "advancers": 694,
+      "decliners": 794,
+      "upVolume": 1043939.6,
+      "downVolume": 1159710.9,
+      "complete": true
+    },
+    {
+      "date": "2026-10-28",
+      "advancers": 428,
+      "decliners": 1086,
+      "upVolume": 953580,
+      "downVolume": 1400993.4,
+      "complete": true
+    },
+    {
+      "date": "2026-10-30",
+      "advancers": 796,
+      "decliners": 709,
+      "upVolume": 1125438.3,
+      "downVolume": 1346627.9,
+      "complete": true
+    },
+    {
+      "date": "2026-11-02",
+      "advancers": 495,
+      "decliners": 1003,
+      "upVolume": 863099.6,
+      "downVolume": 1411772.2,
+      "complete": true
+    },
+    {
+      "date": "2026-11-04",
+      "advancers": 419,
+      "decliners": 1077,
+      "upVolume": 944645.4,
+      "downVolume": 2478960.9,
+      "complete": true
+    }
+  ]
+}
