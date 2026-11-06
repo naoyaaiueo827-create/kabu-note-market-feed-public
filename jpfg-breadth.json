@@ -1,6 +1,6 @@
 {
   "market": "TSE_PRIME",
-  "source": "Japan Exchange Group official Prime auction regular-way stock quotations; market-only aggregated data",
+  "source": "Japan Exchange Group official Prime auction regular-way stock quotations; aggregated market statistics",
   "unchangedExcluded": true,
   "rows": [
     {
@@ -241,6 +241,14 @@
       "decliners": 1077,
       "upVolume": 944645.4,
       "downVolume": 2478960.9,
+      "complete": true
+    },
+    {
+      "date": "2026-11-05",
+      "advancers": 1123,
+      "decliners": 402,
+      "upVolume": 2738855.1,
+      "downVolume": 1183097.2,
       "complete": true
     }
   ]
