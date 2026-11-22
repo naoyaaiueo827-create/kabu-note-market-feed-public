@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "market-only-latest-public-reference; NOT KABU NOTE backend state",
-  "generatedAt": "2026-11-21T00:15:24.215Z",
+  "generatedAt": "2026-11-22T03:23:01.536Z",
   "status": "complete",
   "source": "Federal Reserve Bank of St. Louis FRED",
   "indicators": [
@@ -15,7 +15,7 @@
         "date": "2026-11-19",
         "value": 5.04
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -28,7 +28,7 @@
         "date": "2026-11-19",
         "value": 4.76
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -41,7 +41,7 @@
         "date": "2026-11-19",
         "value": 28.44
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -54,7 +54,7 @@
         "date": "2026-11-19",
         "value": 3.88
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -67,7 +67,7 @@
         "date": "2026-11-13",
         "value": 159.93
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -80,7 +80,7 @@
         "date": "2026-10-01",
         "value": 4.1
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -93,7 +93,7 @@
         "date": "2026-10-01",
         "value": 2.755
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -106,7 +106,7 @@
         "date": "2026-09-01",
         "value": 2.4
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -119,7 +119,7 @@
         "date": "2026-09-01",
         "value": 3.0662710188
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -132,7 +132,7 @@
         "date": "2026-07-01",
         "value": 599455.9
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -145,7 +145,7 @@
         "date": "2026-11-20",
         "value": 56436.65
       },
-      "verifiedAt": "2026-11-21T00:15:24.215Z",
+      "verifiedAt": "2026-11-22T03:23:01.536Z",
       "dataStatus": "fresh_fetch"
     }
   ],
