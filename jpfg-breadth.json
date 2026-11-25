@@ -322,6 +322,14 @@
       "upVolume": 203937.5,
       "downVolume": 2875138.7,
       "complete": true
+    },
+    {
+      "date": "2026-11-24",
+      "advancers": 945,
+      "decliners": 551,
+      "upVolume": 1905787.5,
+      "downVolume": 854029.9,
+      "complete": true
     }
   ]
 }
