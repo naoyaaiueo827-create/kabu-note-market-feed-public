@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "market-only-latest-public-reference; NOT KABU NOTE backend state",
-  "generatedAt": "2026-11-26T05:19:29.359Z",
+  "generatedAt": "2026-11-27T05:16:14.891Z",
   "status": "complete",
   "source": "Federal Reserve Bank of St. Louis FRED",
   "indicators": [
@@ -15,7 +15,7 @@
         "date": "2026-11-24",
         "value": 4.91
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -28,7 +28,7 @@
         "date": "2026-11-24",
         "value": 4.63
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -41,7 +41,7 @@
         "date": "2026-11-24",
         "value": 26.36
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -54,7 +54,7 @@
         "date": "2026-11-24",
         "value": 3.88
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -67,7 +67,7 @@
         "date": "2026-11-20",
         "value": 158.76
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -80,7 +80,7 @@
         "date": "2026-10-01",
         "value": 4.1
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -93,7 +93,7 @@
         "date": "2026-10-01",
         "value": 2.755
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -106,7 +106,7 @@
         "date": "2026-09-01",
         "value": 2.4
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -119,7 +119,7 @@
         "date": "2026-09-01",
         "value": 3.0662710188
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -132,7 +132,7 @@
         "date": "2026-07-01",
         "value": 599455.9
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     },
     {
@@ -142,10 +142,10 @@
       "source": "Federal Reserve Bank of St. Louis FRED",
       "sourceUrl": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NIKKEI225",
       "latest": {
-        "date": "2026-11-25",
-        "value": 57011.62
+        "date": "2026-11-26",
+        "value": 57499.16
       },
-      "verifiedAt": "2026-11-26T05:19:29.359Z",
+      "verifiedAt": "2026-11-27T05:16:14.891Z",
       "dataStatus": "fresh_fetch"
     }
   ],
